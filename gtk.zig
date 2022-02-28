@@ -1,16 +1,16 @@
-pub usingnamespace @import("src/enums.zig");
+pub usingnamespace @import("gtk/enums.zig");
 
-pub const Application = @import("src/Application.zig").Application;
-pub const ApplicationWindow = @import("src/ApplicationWindow.zig").ApplicationWindow;
-pub const Box = @import("src/Box.zig").Box;
-pub const BuilderListItemFactory = @import("src/BuilderListItemFactory.zig").BuilderListItemFactory;
-pub const BuilderScope = @import("src/BuilderScope.zig").BuilderScope;
-pub const ListItemFactory = @import("src/ListItemFactory.zig").ListItemFactory;
-pub const SelectionModel = @import("src/SelectionModel.zig").SelectionModel;
-pub const SingleSelection = @import("src/SingleSelection.zig").SingleSelection;
-pub const GridView = @import("src/GridView.zig").GridView;
-pub const Widget = @import("src/Widget.zig").Widget;
-pub const Window = @import("src/Window.zig").Window;
+pub const Application = @import("gtk/Application.zig").Application;
+pub const ApplicationWindow = @import("gtk/ApplicationWindow.zig").ApplicationWindow;
+pub const Box = @import("gtk/Box.zig").Box;
+pub const BuilderListItemFactory = @import("gtk/BuilderListItemFactory.zig").BuilderListItemFactory;
+pub const BuilderScope = @import("gtk/BuilderScope.zig").BuilderScope;
+pub const ListItemFactory = @import("gtk/ListItemFactory.zig").ListItemFactory;
+pub const SelectionModel = @import("gtk/SelectionModel.zig").SelectionModel;
+pub const SingleSelection = @import("gtk/SingleSelection.zig").SingleSelection;
+pub const GridView = @import("gtk/GridView.zig").GridView;
+pub const Widget = @import("gtk/Widget.zig").Widget;
+pub const Window = @import("gtk/Window.zig").Window;
 
 extern fn gtk_init() void;
 pub const init = gtk_init;
