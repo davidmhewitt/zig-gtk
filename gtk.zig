@@ -1,7 +1,6 @@
 pub usingnamespace @import("src/enums.zig");
 
 pub const Application = @import("src/Application.zig").Application;
-pub const ApplicationFlags = @import("src/Application.zig").ApplicationFlags;
 pub const ApplicationWindow = @import("src/ApplicationWindow.zig").ApplicationWindow;
 pub const Box = @import("src/Box.zig").Box;
 pub const BuilderListItemFactory = @import("src/BuilderListItemFactory.zig").BuilderListItemFactory;
