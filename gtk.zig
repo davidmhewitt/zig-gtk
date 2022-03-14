@@ -14,3 +14,21 @@ pub const Window = @import("gtk/Window.zig").Window;
 
 extern fn gtk_init() void;
 pub const init = gtk_init;
+
+fn refAllDeclsRecursive(comptime T: type) void {
+    comptime {
+        for (@import("std").meta.declarations(T)) |decl| {
+            if (decl.is_pub) {
+                switch (decl.data) {
+                    .Type => |T2| refAllDeclsRecursive(T2),
+                    else => _ = decl,
+                }
+            }
+        }
+    }
+}
+
+test {
+    @setEvalBranchQuota(100000);
+    refAllDeclsRecursive(@This());
+}

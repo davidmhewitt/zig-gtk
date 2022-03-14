@@ -1,0 +1,3 @@
+[submodule "deps/zig-glib"]
+	path = deps/zig-glib
+	url = https://github.com/davidmhewitt/zig-glib
