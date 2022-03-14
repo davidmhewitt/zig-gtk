@@ -15,7 +15,7 @@ pub fn build(b: *Builder) void {
     gtk_test.linkSystemLibrary("gtk4");
     gtk_test.addPackage(glib);
 
-    const gdk_test = b.addTest("gtk.zig");
+    const gdk_test = b.addTest("gdk.zig");
     gdk_test.setTarget(target);
     gdk_test.setBuildMode(mode);
 

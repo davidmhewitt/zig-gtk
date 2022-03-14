@@ -1,4 +1,5 @@
 pub const Display = @import("gdk/Display.zig").Display;
+pub const Pixbuf = @import("gdk/Pixbuf.zig").Pixbuf;
 pub const Wayland = @import("gdk/Wayland.zig");
 
 fn refAllDeclsRecursive(comptime T: type) void {
