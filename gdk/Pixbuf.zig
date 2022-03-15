@@ -39,11 +39,11 @@ pub const Pixbuf = extern struct {
     extern fn gdk_pixbuf_get_width(self: *const Self) i32;
     pub const getWidth = gdk_pixbuf_get_width;
 
-    extern fn gdk_pixbuf_has_alpha(self: *const Self) bool;
-    pub const hasAlpha = gdk_pixbuf_has_alpha;
+    extern fn gdk_pixbuf_get_has_alpha(self: *const Self) bool;
+    pub const getHasAlpha = gdk_pixbuf_get_has_alpha;
 
     extern fn gdk_pixbuf_read_pixels(self: *const Self) [*]const u8;
-    pub fn getPixels(self: *const Self) []const u8 {
+    pub fn readPixels(self: *const Self) []const u8 {
         return gdk_pixbuf_read_pixels(self)[0..self.getByteLength()];
     }
 
