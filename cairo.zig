@@ -1,7 +1,8 @@
-pub const Cairo = @import("gdk/Cairo.zig");
-pub const Display = @import("gdk/Display.zig").Display;
-pub const Pixbuf = @import("gdk/Pixbuf.zig").Pixbuf;
-pub const Wayland = @import("gdk/Wayland.zig");
+pub const Context = @import("cairo/Context.zig").Context;
+pub const ImageSurface = @import("cairo/ImageSurface.zig").ImageSurface;
+pub const Pattern = @import("cairo/Pattern.zig").Pattern;
+pub const Surface = @import("cairo/Surface.zig").Surface;
+pub usingnamespace @import("cairo/enums.zig");
 
 fn refAllDeclsRecursive(comptime T: type) void {
     comptime {
